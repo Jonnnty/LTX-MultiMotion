@@ -8,4 +8,4 @@ Built on LTX-Video-2B's lightweight architecture, LTX-MultiMotion re-engineers e
 ## Key Innovations
 - **Person-Aware Architecture**: We repurpose the spatial width dimension to dynamically represent varying numbers of characters in a unified latent space.
 - **Specialized Pathways**: A triple-branch decoder with dedicated networks isolates and generates translation, orientation, and pose components in parallel.
-- **Progressive Expansion**: The decoder network begins with a shallow structure and dynamically increases its depth layer-by-layer during training, adapting its capacity to the complexity of the motion data.
+- **Progressive Expansion**: The encoder and decoder network begins with a shallow structure and dynamically increases its depth layer-by-layer during training, adapting its capacity to the complexity of the motion data.
