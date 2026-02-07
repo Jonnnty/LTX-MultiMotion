@@ -15,8 +15,6 @@ Built on LTX-Video-2B's lightweight architecture, LTX-MultiMotion re-engineers e
 - **Specialized Pathways**: A triple-branch decoder with dedicated networks isolates and generates translation, orientation, and pose components in parallel.
 - **Progressive Expansion**: The encoder and decoder network begins with a shallow structure and dynamically increases its depth layer-by-layer during training, adapting its capacity to the complexity of the motion data.
 
-## Overview
-This project is modified from [LTX-Video](https://github.com/Lightricks/LTX-Video).
 
 ## Setup & Preparation
 ### 1. Download Pretrained Models
@@ -50,3 +48,5 @@ Generate motion from a text prompt:
 python inference.py --prompt "Promote" --height 32 --width [32*number_of_person] --num_frames [number_of_frames] --pipeline_config configs/ltxv-2b-0.9.8-distilled.yaml --motion_mode --root_checkpoint_path [path_to_root_decoder_checkpoint] --trans_checkpoint_path [path_to_translation_decoder_checkpoint] --pose_checkpoint_path [path_to_pose_decoder_checkpoint]
 ```
 
+## Acknowledgement
+This project is modified from [LTX-Video](https://github.com/Lightricks/LTX-Video).
