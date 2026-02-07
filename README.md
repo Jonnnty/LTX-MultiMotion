@@ -47,6 +47,5 @@ Generate motion from a text prompt:
 ```bash
 python inference.py --prompt "Promote" --height 32 --width [32*number_of_person] --num_frames [number_of_frames] --pipeline_config configs/ltxv-2b-0.9.8-distilled.yaml --motion_mode --root_checkpoint_path [path_to_root_decoder_checkpoint] --trans_checkpoint_path [path_to_translation_decoder_checkpoint] --pose_checkpoint_path [path_to_pose_decoder_checkpoint]
 ```
-
 ## Acknowledgement
 This project is modified from [LTX-Video](https://github.com/Lightricks/LTX-Video).
