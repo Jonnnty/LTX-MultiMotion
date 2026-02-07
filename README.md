@@ -38,7 +38,12 @@ Train separate decoders for translation, orientation, and pose:
 ```bash
 python decoder_train.py --features_dir [path_to_prepared_latents_from_stage1] --gt_dir ./motions --branch [trans/root/pose] --target_loss Loss --max_depth 20 --initial_depth 2 --patience 10 --min_improvement 0.001 --batch_size 1 --num_epochs 500 --learning_rate 1e-4 --num_workers 8 --save_freq 10 --save_dir [save_directory] --device cuda --min_epochs_after_depth_increase 30
 ```
+## Pretrained Models
+We provide pre-trained decoder models on Hugging Face at [Jonnty/LTX-MultiMotion](https://huggingface.co/Jonnty/LTX-MultiMotion/tree/main) for direct use. All models were trained for 500 epochs with progressive depth expansion:
 
+- **Translation Decoder**: Loss improved from 0.19 to 0.015, current depth: 16 layers
+- **Root (Orientation) Decoder**: Loss improved from 0.64 to 0.10, current depth: 13 layers  
+- **Pose Decoder**: Loss improved from 0.037 to 0.018, current depth: 17 layers
 ## Inference
 Generate motion from a text prompt:
 ```bash
